@@ -3,16 +3,37 @@
 <html>
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Mudando estilo com js!</title>
-  <link rel="stylesheet" type="text/css" href="calculadora.css">
+  <title>Somando números</title>
+  <style>
+    body{
+      font: normal 18pt Arial;
+      width: 100px;
+    }
+    div#result{
+      margin-top: 20px;
+    }
+    input#num{
+      width: 500px;
+    }
+    input#num2{
+      width: 500px;
+    }
+   input{
+      width: 125px;
+    }
+  </style>
 </head>
 <body>
   <h1>
-    Soma de valores
+    Calculando valores
   </h1>
-  <div id="area">
-    Interaja
-  </div>
-  <script src="dom.js"></script>
+  <input type="number" name="num1" id="num">
+  <input type="number" name="num2" id="num2">
+  <input id="soma" type="button" value="+" onClick="somar()">
+  <input id="subtracao" type="button" value="-" onClick="sub()">
+  <input id="multiplicacao" type="button" value="×" onClick="mult()">
+  <input id="divisao" type="button" value="/" onClick="div()">
+  <div id="result">Resultado</div>
+  <script src="dom2.js"></script>
 </body>
 </html>
