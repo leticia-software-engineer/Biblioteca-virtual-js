@@ -11,6 +11,8 @@
     }
     div#result{
       margin-top: 20px;
+      width: 100%;
+      white-space: nowrap;
     }
     input#num{
       width: 500px;
@@ -18,22 +20,54 @@
     input#num2{
       width: 500px;
     }
-   input{
-      width: 125px;
+   input#soma{
+      width: 100px;
+      background-color: beige;
     }
+  input#subtracao{
+      width: 100px;
+      background-color: beige;
+    }
+  input#multiplicacao{
+      width: 100px;
+      background-color: beige;
+    }
+  input#divisao{
+      width: 100px;
+      background-color: beige;
+    }
+  input#potencia{
+      width: 100px;
+      background-color: beige;
+    }
+  div#operac{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  div#calculadora{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
   </style>
 </head>
 <body>
   <h1>
     Calculando valores
   </h1>
-  <input type="number" name="num1" id="num">
-  <input type="number" name="num2" id="num2">
-  <input id="soma" type="button" value="+" onClick="somar()">
-  <input id="subtracao" type="button" value="-" onClick="sub()">
-  <input id="multiplicacao" type="button" value="×" onClick="mult()">
-  <input id="divisao" type="button" value="/" onClick="div()">
-  <div id="result">Resultado</div>
+  <div id="calculadora">
+    <input type="number" name="num1" id="num" placeholder="Insira um número">
+    <input type="number" name="num2" id="num2" placeholder="Insira um número">
+    <div id="operac">
+      <input id="soma" type="button" value="+" onClick="somar()">
+      <input id="subtracao" type="button" value="-" onClick="sub()">
+      <input id="multiplicacao" type="button" value="×" onClick="mult()">
+      <input id="divisao" type="button" value="/" onClick="div()">
+      <input id="potencia" type="button" value="*" onClick="pot()">
+    </div>
+      <div id="result">Resultado</div>
+  </div>
   <script src="dom2.js"></script>
 </body>
 </html>
